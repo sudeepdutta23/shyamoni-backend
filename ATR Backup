@@ -1,0 +1,1179 @@
+{
+	"info": {
+		"_postman_id": "902af03d-99ca-4276-88f9-25a5d90c349d",
+		"name": "ecomApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/register?name=jiaul&phoneNo=9101906834&email=jiaul95@gmail.com&password=password",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "jiaul"
+						},
+						{
+							"key": "phoneNo",
+							"value": "9101906834"
+						},
+						{
+							"key": "email",
+							"value": "jiaul95@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginApi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ADMFTNLgGP2Qj33PDRO18VaYUNCniWGlWFC3OJuK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/login?username=9101906834&password=password",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "9101906834"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgetPassword Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/forgotPassword?email=admin@gmail.com",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"forgotPassword"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCategoryApi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/addCategory?categoryName=category5",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"addCategory"
+					],
+					"query": [
+						{
+							"key": "categoryName",
+							"value": "category5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProductApi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Category",
+							"value": "5",
+							"type": "default"
+						},
+						{
+							"key": "subCategory",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "productName",
+							"value": "Product",
+							"type": "default"
+						},
+						{
+							"key": "brand",
+							"value": "sss",
+							"type": "default"
+						},
+						{
+							"key": "quantity",
+							"value": "13",
+							"type": "default"
+						},
+						{
+							"key": "orginal_price",
+							"value": "2000",
+							"type": "default"
+						},
+						{
+							"key": "selling_price",
+							"value": "2000",
+							"type": "default"
+						},
+						{
+							"key": "discount_amount",
+							"value": "2000",
+							"type": "default"
+						},
+						{
+							"key": "shortDesc",
+							"value": "test ddd",
+							"type": "default"
+						},
+						{
+							"key": "longDesc",
+							"value": "test longDesc",
+							"type": "default"
+						},
+						{
+							"key": "keywords",
+							"value": "test keywords",
+							"type": "default"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "ImagePath[]",
+							"type": "file",
+							"src": [
+								"/C:/Users/Developer/Downloads/homepage-header-bg.jpg",
+								"/C:/Users/Developer/Downloads/store01.png",
+								"/C:/Users/Developer/Downloads/store02.png"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/v1/admin/addProduct",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubCategoryByID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|QI3S9P11NDA2IZ69FiqztFsYrpNH0zwUjJh9fVlG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/SubCategoryByID/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"SubCategoryByID",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductUnderCategoryByID API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/ProductUnderCategory/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"ProductUnderCategory",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductUnderSubCategoryByID API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/ProductUnderSubCategory/4",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"ProductUnderSubCategory",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchCategoryAPI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|X7kacs9dBbEbH784e9BOtqjtWFOso4t89o9q0VaK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchCategory",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchSubCategoryApi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|X7kacs9dBbEbH784e9BOtqjtWFOso4t89o9q0VaK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchSubCategory",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchSubCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserFeedback Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/addUserFeedBack?user_id=2&product=1&userRating=8&comment=test ",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"addUserFeedBack"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "product",
+							"value": "1"
+						},
+						{
+							"key": "userRating",
+							"value": "8"
+						},
+						{
+							"key": "comment",
+							"value": "test "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "randomFetchProduct Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/ProductUnderCategory/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"ProductUnderCategory",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|MyvL8IKApiPjixQdq50g4FHYsHeGd5TNRbELOsXZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/user/logout",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCartItem Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|RP0HrgOD8tUDG8E9F3Gda2NThkMEU0ksm8frPmj2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/addCartItem?product=1&pieces=10&coupons=abc4656&discount_price=500",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"addCartItem"
+					],
+					"query": [
+						{
+							"key": "product",
+							"value": "1"
+						},
+						{
+							"key": "pieces",
+							"value": "10"
+						},
+						{
+							"key": "coupons",
+							"value": "abc4656"
+						},
+						{
+							"key": "discount_price",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editCartItem Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lShIE4MLY2rZnwNY7J7y0sqtmH3fTa9O7x4ccN0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/editCartItem/2?product=20&pieces=50&coupons=abc4656hhh555&discount_price=700",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"editCartItem",
+						"2"
+					],
+					"query": [
+						{
+							"key": "product",
+							"value": "20"
+						},
+						{
+							"key": "pieces",
+							"value": "50"
+						},
+						{
+							"key": "coupons",
+							"value": "abc4656hhh555"
+						},
+						{
+							"key": "discount_price",
+							"value": "700"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchCartItem Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lShIE4MLY2rZnwNY7J7y0sqtmH3fTa9O7x4ccN0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchCartItem",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchCartItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCartItem Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|lShIE4MLY2rZnwNY7J7y0sqtmH3fTa9O7x4ccN0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/deleteCartItem/1",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"deleteCartItem",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCatSubCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|QI3S9P11NDA2IZ69FiqztFsYrpNH0zwUjJh9fVlG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/getCatSubCategory",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"getCatSubCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCatSubCategory Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|QI3S9P11NDA2IZ69FiqztFsYrpNH0zwUjJh9fVlG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/getCatSubCategory",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"getCatSubCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchProduct Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchProduct",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "public randomFetchProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/randomFetchProduct",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"randomFetchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchSingleProduct Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchSingleProduct/1",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchSingleProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "public Payment Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|7BOsID8b5ARybfXaDDjd2hCK1mnt7xa9Xxq5fRil",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "600",
+							"type": "default"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/v1/user/payment",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|i8hFrFTqMbFYAk5CxR9cng30xlVSdxVG8cK3cw3N",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/logout",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProfileInfo Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|TzsIrBm8ddgFvH1eixBdeHommgbb5bGw60SsakNp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/addProfileInfo",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"addProfileInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFeedbackByProductID API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/getFeedbackByProductID/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"getFeedbackByProductID",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfileInfo Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|eRnbA8UbYL5xmWdfgdPL5XUQjqEb6AAAvytfXInn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "default"
+						},
+						{
+							"key": "dob",
+							"value": "1995-05-21",
+							"type": "default"
+						},
+						{
+							"key": "userPhoto",
+							"type": "file",
+							"src": "/C:/Users/Developer/Pictures/Screenshot 2021-09-10 141202.png"
+						},
+						{
+							"key": "address_line_1",
+							"value": "ghy",
+							"type": "default"
+						},
+						{
+							"key": "address_line_2",
+							"value": "ghy",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "ghy",
+							"type": "default"
+						},
+						{
+							"key": "district",
+							"value": "kamrup",
+							"type": "default"
+						},
+						{
+							"key": "country",
+							"value": "india",
+							"type": "default"
+						},
+						{
+							"key": "zip",
+							"value": "781025",
+							"type": "default"
+						},
+						{
+							"key": "state",
+							"value": "assam",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/v1/user/updateProfileInfo",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"updateProfileInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/deleteProduct/2",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"deleteProduct",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/deleteCategory/1",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"deleteCategory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin fetchProduct API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|oJlIhuKSe78eKPhgHzSj0rxV4TYbTviKIQpXVvT7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/admin/fetchProduct",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"fetchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "protected cartItemCount Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|RP0HrgOD8tUDG8E9F3Gda2NThkMEU0ksm8frPmj2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/cartItemCount",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"cartItemCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user fetchCartItem Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|RP0HrgOD8tUDG8E9F3Gda2NThkMEU0ksm8frPmj2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/v1/user/fetchCartItem",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"v1",
+						"user",
+						"fetchCartItem"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

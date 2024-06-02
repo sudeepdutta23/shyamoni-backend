@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/16815551/how-to-do-this-in-laravel-subquery-where-in
+
+https://hackthestuff.com/article/how-to-get-request-headers-in-laravel
+
+https://laravel.com/docs/9.x/middleware

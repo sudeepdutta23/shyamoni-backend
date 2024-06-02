@@ -1,0 +1,1 @@
+1. check user role in middleware if a user is authorized or not
